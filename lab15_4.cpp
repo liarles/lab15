@@ -17,5 +17,23 @@ int main(){
 	
 	return 0;
 }
-
+void shuffle(int &a,int &b,int &c,int &d){
+    int money[4] = {a,b,c,d};
+    int pos1,pos2;
+    
+    pos1 = rand()%4;
+    pos2 = rand()%4;
+    
+    while (pos1==pos2){
+        pos2 = rand()%4;
+    }
+    int place = money[pos1];
+    money[pos1] = money[pos2];
+    money[pos2] = place;
+    
+    a = money[0];
+    b = money[1];
+    c = money[2];
+    d = money[3];
+}
 //Do not modify source code above this line
